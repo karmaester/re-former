@@ -1,9 +1,28 @@
-<%= form_for @user, url: {action: "update"} do |f| %>
-  <%= f.label(:username, 'Your user name here') %>
-  <%= f.text_field(:username) %>
-  <%= f.label(:email, 'Email') %>
-  <%= f.text_field(:email, placeholder: "example@example.com") %>
-  <%= f.label(:password, 'Password') %>
-  <%= f.password_field(:password) %>
-  <%= f.submit("Submit") %>
+<div class="container w-50 align-center">
+  <div class="card d-flex flex-row justify-content-center shadow p-1 mb-3 mt-4 bg-light rounded">
+    <% if @user.errors.any? %>
+      <ul class='list-unstyled'>
+        <% @user.errors.full_messages.each do |err|%>
+          <li class='decoration-none text-danger text-decoration-none'> <%= err %></li>
+        <% end%>
+      </ul>
+    <% end %>
+  </div>
+  <div class="card d-flex flex-row justify-content-center shadow p-1 mb-3 mt-4 bg-light rounded">
+    <%= form_for @user, url: {action: "update"} do |f| %>
+    <div class="d-flex justify-content-between pb-4 mt-3">
+    <%= f.label :username, 'Username' , class: 'text-secondary text-center font-weight-bolder' %>
+    <%= f.text_field :username, class: 'ml-5'  %>
+    </div>
+    <div class="d-flex justify-content-between pb-4">
+    <%= f.label :email, 'Email' , class: 'text-secondary text-center font-weight-bolder' %>
+    <%= f.text_field :email, placeholder: "example@example.com", class: 'ml-5'  %>
+    </div>
+    <div class="d-flex justify-content-between pb-4">
+    <%= f.label :password, 'Password' , class: 'text-secondary text-center font-weight-bolder' %>
+    <%= f.password_field :password, class: 'ml-5'  %>
+    </div>
+    <%= f.submit "Update", class: 'btn btn-success w-100 mb-3'  %>
 <% end %>
+  </div>
+</div>

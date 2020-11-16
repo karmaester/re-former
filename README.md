@@ -9,8 +9,6 @@
 
 ![screenshot](app/assets/images/screenshot2.png)
 
-
-
 ## Built With
 
 - Ruby

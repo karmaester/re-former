@@ -1,3 +1,13 @@
+<%#= form_tag url_for(@user) do %>
+  <%#= label_tag 'username', 'Username'%>
+  <%#= text_field_tag 'username' %>
+  <%#= label_tag 'email', 'Email'%>
+  <%#= text_field_tag 'email' %>
+  <%#= label_tag 'password', 'Passwod'%>
+  <%#= password_field_tag 'password' %>
+  <%#= submit_tag 'Create'%>
+<%# end%>
+
 <div class="container w-50 align-center">
   <div class="card d-flex flex-row justify-content-center shadow p-1 mb-3 mt-4 bg-light rounded">
     <% if @user.errors.any? %>

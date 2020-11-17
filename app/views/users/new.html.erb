@@ -27,6 +27,16 @@
   </div>
 </div>
 
+<%#= form_tag url_for(@user) do %>
+  <%#= label_tag 'username', 'Username'%>
+  <%#= text_field_tag 'username' %>
+  <%#= label_tag 'email', 'Email'%>
+  <%#= text_field_tag 'email' %>
+  <%#= label_tag 'password', 'Passwod'%>
+  <%#= password_field_tag 'password' %>
+  <%#= submit_tag 'Create'%>
+<%# end%>
+
 <%#
 <form action="/users" method='POST' accept-charset="utf-8">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %><%#">
